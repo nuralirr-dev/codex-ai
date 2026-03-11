@@ -1,0 +1,25 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: api-docs-ui
+
+external:
+  api-docs:
+    # Example source from another service:
+    base-url: http://localhost:8080/api/v3/api-docs
+    # Optional auth to fetch docs from external service:
+    username:
+    password:
+    bearer-token:
+
+springdoc:
+  api-docs:
+    enabled: false
+  swagger-ui:
+    path: /
+    display-request-duration: true
+    persist-authorization: true
+    try-it-out-enabled: true
+    url: /api-docs/01.all-api
